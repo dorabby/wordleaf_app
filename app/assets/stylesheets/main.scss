@@ -1,0 +1,121 @@
+.main {
+  width: calc(100% - 250px);
+  float: right;
+  .header {
+    box-sizing: border-box;
+    height: 100px;
+    padding-left: 40px;
+    .left-header {
+      float: left;
+      &__title {
+        color: #333;
+        font-size: 20px;
+        margin-top: 35px;
+      }
+    }
+    .right-header {
+      padding-left: 40px;
+      float: right;
+      color: white;
+      display: flex;
+      height: 100px;
+      width: 200px;
+      line-height: 100px;
+      background-color: #34675c;
+      &__user{
+        width: 100px;
+        }
+      &__user-btn{
+        float: left;
+      }
+      .icon{
+        color: white;
+      }
+    }
+  }
+
+  .menu {
+    background-color: #7da3a1;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    .new-word{
+      padding: 15px 20px;
+    }
+    #form{
+      position:relative;
+      max-width:300px;	
+      margin-bottom:20px;
+      padding-right: 440px;
+      }
+      #box{
+      height:50px;
+      padding:0 10px; 
+      position:absolute; 
+      left:0;
+      top:0; 
+      border-radius:2px;
+      outline:0;
+      background:#eee;	
+      width: 380px;
+      }
+      #btn{
+      height:50px;
+      position:absolute; 
+      left:350px;
+      top:3px;
+      background:none;
+      color:#666;
+      border:none;
+      font-size:20px;
+      }
+      #sbtn5:hover{
+      color:#7fbfff;
+    }
+  }
+  .words {
+    background-color: #FAFAFA;
+    box-sizing: border-box;
+    padding: 30px 40px 0;
+    height: calc(100vh - 170px);
+    overflow: scroll;
+    .word {
+      .main-word{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 3fr 1fr 6fr;
+        color: #434a54;
+        &__word {
+          font-size: 16px;
+          font-weight: bold;
+          border: 1px solid #1b6d2c;
+          padding-left: 50px;
+          height: 100px;
+          line-height: 100px;
+        }
+        &__Details{
+          font-size: 16px;
+          font-weight: bold;
+          border: 1px solid #1b6d2c;
+          padding: 0 25px;
+          height: 100px;
+          text-align: center;
+          line-height: 100px;
+        }
+        &__text{
+          font-size: 16px;
+          font-weight: bold;
+          border: 1px solid #1b6d2c;
+          padding-left: 50px;
+          height: 100px;
+          line-height: 100px;
+        }
+      }
+    }
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}

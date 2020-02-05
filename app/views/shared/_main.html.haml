@@ -1,0 +1,29 @@
+.main
+  .header
+    .left-header
+      .left-header__title
+        テスト（本の名前）
+    .right-header
+      .right-header__user
+        ユーザー名
+      .right-header__user-btn
+        = link_to '#' do
+          = icon('fa', 'cog',class: 'icon')
+  .menu
+    .new-word
+      = link_to '#' do
+        = icon('fa', 'leaf',class: 'icon')
+        単語登録
+    %form#form{:action => "自分のサイトURL", :method => "get"}
+      %input#box{:placeholder => "単語を検索", :type => "text"}/
+      %button#btn{:type => "submit"}
+        %i.fas.fa-search
+  .words
+    .word
+      .main-word
+        .main-word__word
+          単語
+        .main-word__Details
+          詳細
+        .main-word__text
+          短い文章

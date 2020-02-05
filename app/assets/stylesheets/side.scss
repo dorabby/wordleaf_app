@@ -1,0 +1,45 @@
+.side-bar {
+  box-sizing: border-box;
+  color: white;
+  width: 250px;
+  .header {
+    background-color: #34675c;
+    height: 170px;
+    line-height: 170px;
+    &__title {
+      padding-left: 45px;
+      font-weight: bold;
+      font-size: 30px;
+    }
+    &__lists {
+      display: inline-block;
+      .list {
+        display: inline-block;
+      }
+      .icon {
+        color: white;
+      }
+    }
+  }
+
+  .books {
+    background-color: #324851;
+    height: calc(100vh - 170px);
+    padding: 0 20px;
+    .new-book{
+      padding: 30px 40px;
+      color: white;
+    }
+    .book {
+      box-sizing: border-box;
+      padding: 30px 0;
+      display: flex;
+      &__name {
+        color: white;
+      }
+      &__name-btn{
+        font-size: small;
+      }
+    }
+  }
+}
