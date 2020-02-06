@@ -2,18 +2,17 @@
   .header
     .header__title
       Word Leaf
+  .new-book
+    = link_to new_book_path do
+      = icon('fa', 'book',class: 'icon')
+      ノート作成
   .books
-    .new-book
-      = link_to '#' do
-        = icon('fa', 'book',class: 'icon')
-        ノート作成
-    .book
-      .book__name
-        テスト（本の名前）
-      .book__name-btn
-        編集
-    .book
-      .book__name
-        テスト2（本の名前）
-      .book__name-btn
-        編集
+    .book-list
+      - @books.each do |book|
+        .book
+          .book__name
+            = book.name
+          .book__name-btn
+            = link_to edit_book_path(book) do
+              = icon('fa', 'book',class: 'icon')
+              編集
