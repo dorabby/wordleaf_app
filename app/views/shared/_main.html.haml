@@ -5,9 +5,9 @@
         テスト（本の名前）
     .right-header
       .right-header__user
-        ユーザー名
+        = current_user.name
       .right-header__user-btn
-        = link_to '#' do
+        = link_to edit_user_path(current_user) do
           = icon('fa', 'cog',class: 'icon')
   .menu
     .new-word
