@@ -43,6 +43,10 @@
     justify-content: space-between;
     .new-word{
       padding: 15px 20px;
+      a{
+        text-decoration: none;
+        color: white;
+      }
     }
     #form{
       position:relative;
@@ -70,9 +74,6 @@
       color:#666;
       border:none;
       font-size:20px;
-      }
-      #sbtn5:hover{
-      color:#7fbfff;
     }
   }
   .words {

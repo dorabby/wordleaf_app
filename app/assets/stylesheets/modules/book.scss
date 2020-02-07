@@ -5,29 +5,28 @@ h1 {
   text-align: center;
 }
 
-.book-name{
+.name-form{
   width: 980px;
   margin: 60px auto;
   padding: 40px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #34675c;
   border-radius: 5px;
   box-sizing: border-box;
-  &__input {
+  .book-name {
     float: left;
     width: 100%;
     line-height: 30px;
     padding: 10px 15px;
     box-sizing: border-box;
+    margin-bottom: 20px;
+    border:1px solid #7da3a1;
   }
-  &__action-btn {
+  .save-btn {
     display: inline-block;
     padding: 12px 20px;
     color: #fff;
-    background-color: #38aef0;
+    background-color: #34675c;
     border: 0;
-  }
-  &__field {
-    margin-top: 30px;
   }
 }

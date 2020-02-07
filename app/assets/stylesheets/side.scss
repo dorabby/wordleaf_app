@@ -24,10 +24,13 @@
   
   .new-book{
       padding: 30px 0;
-      color: white;
       height: 25px;
       background-color: #324851;
       text-align: center;
+      a{
+        text-decoration: none;
+        color: white;
+      }
     }
 
   .books {
@@ -46,9 +49,14 @@
           color: white;
         }
         &__name-btn{
-          .icon{
-            padding-left: 15px;
-            padding-top: 5px;
+          a{
+            text-decoration: none;
+            color: white;
+            font-size: 10px;
+            .icon{
+              padding-left: 15px;
+              padding-top: 5px;
+            }
           }
         }
       }
