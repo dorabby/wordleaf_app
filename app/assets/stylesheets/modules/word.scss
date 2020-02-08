@@ -1,0 +1,50 @@
+.word-form{
+  width: 980px;
+  margin: 60px auto;
+  padding: 40px;
+  border: 1px solid #34675c;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  h1 {
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .word-area__name,
+  .word-area__text{
+    width: 100%;
+    line-height: 30px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border:1px solid #7da3a1;
+  }
+
+  .word-area__details{
+    width: 100%;
+    height: 400px;
+    line-height: 30px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border:1px solid #7da3a1;
+    overflow: scroll;
+  }
+
+  .save-btn,
+  li{
+    display: inline-block;
+    padding: 12px 20px;
+    margin-right: 10px;
+    color: #fff;
+    background-color: #34675c;
+    border: 0;
+    a{
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}

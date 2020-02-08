@@ -49,14 +49,14 @@
           color: white;
         }
         &__name-btn{
-          a{
-            text-decoration: none;
-            color: white;
-            font-size: 10px;
-            .icon{
-              padding-left: 15px;
-              padding-top: 5px;
-            }
+          font-size: 10px;
+        }
+        a{
+          text-decoration: none;
+          color: white;
+          .icon{
+            padding-left: 15px;
+            padding-top: 5px;
           }
         }
       }

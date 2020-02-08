@@ -5,14 +5,15 @@
   .new-book
     = link_to new_book_path do
       = icon('fa', 'book',class: 'icon')
-      ノート作成
+      ブック作成
   .books
     .book-list
-      - @books.each do |book|
+      - current_user.books.each do |book|
         .book
-          .book__name
-            = book.name
-          .book__name-btn
-            = link_to edit_book_path(book) do
-              = icon('fa', 'book',class: 'icon')
-              編集
+          = link_to book_words_path(book) do
+            .book__name
+              = book.name
+            .book__name-btn
+              = link_to edit_book_path(book) do
+                = icon('fa', 'book',class: 'icon')
+                編集

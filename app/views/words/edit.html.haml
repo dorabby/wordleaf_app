@@ -1,0 +1,8 @@
+.word-form
+  %h1 Word 編集
+  =form_for [@book,@word] do |f|
+    = f.text_field :name, class: "word-area__name", placeholder: "単語を入力してください(20文字まで)"
+    = f.text_field :text, class: "word-area__text", placeholder: "意味を入力してください(30文字まで)"
+    = f.text_area :details, class: "word-area__details", placeholder: "詳細を入力してください"
+
+    = f.submit "登録", class: "save-btn"

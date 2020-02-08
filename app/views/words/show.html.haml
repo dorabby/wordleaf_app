@@ -1,0 +1,16 @@
+.word-form
+  %h1 Word詳細
+  .word-area__name
+    = @word.name
+  .word-area__text
+    = @word.text
+  .word-area__details
+    = @word.details
+  %ul.btn-list
+    %li.return
+      = link_to "戻る",book_words_path(@book)
+    %li.edit
+      = link_to "編集",edit_book_word_path(@book, @word)
+    %li.destroy
+      = link_to "削除",book_words_path(@book)
+  
