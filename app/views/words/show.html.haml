@@ -1,0 +1,10 @@
+.word-form
+  %h1 Word詳細
+  .word-area__name
+    = @word.name
+  .word-area__text
+    = @word.text
+  .word-area__details
+    = @word.details
+  .return-btn
+    = link_to "戻る",book_words_path(@book)
