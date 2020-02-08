@@ -22,24 +22,28 @@ class WordsController < ApplicationController
     else
       render :index
     end
-
-
-
-    def edit
-      @word = Word.find(params[:id])
-    end
-
-    def update
-      @word = Word.find(params[:id])
-      if @word.update(word_params)
-        redirect_to book_words_path(book)
-      else
-        render :edit
-      end
-
-    end
-
   end
+
+  def edit
+    @word = Word.find(params[:id])
+  end
+
+  def update
+    @word = Word.find(params[:id])
+    if @word.update(word_params)
+      redirect_to book_words_path(@book)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @word = Word.find(params[:id])
+    @word.destroy
+    redirect_to book_words_url(@book)
+  end
+
+
 
   private
 
