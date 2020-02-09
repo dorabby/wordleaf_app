@@ -14,10 +14,12 @@
       = link_to new_book_word_path(@book) do
         = icon('fa', 'leaf',class: 'icon')
         単語登録
-    %form#form{:action => "自分のサイトURL", :method => "get"}
-      %input#box{:placeholder => "単語を検索", :type => "text"}/
-      %button#btn{:type => "submit"}
-        %i.fas.fa-search
+
+    .form
+      = form_with(url: search_book_words_path(@book), local: true, method: :get) do |form|
+        = form.text_field :name, placeholder: "単語を検索する", class: "box"
+        = form.submit "検索", class: "btn"
+
   .words
     .word
       = render @words

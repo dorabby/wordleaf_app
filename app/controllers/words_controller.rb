@@ -1,7 +1,8 @@
 class WordsController < ApplicationController
   before_action :set_book
+  before_action :move_to_index, except: [:index, :show, :search]
 
-  def index
+  def index    
     @word = Word.all
     @words = @book.words.includes(:user)
   end
@@ -43,6 +44,10 @@ class WordsController < ApplicationController
     redirect_to book_words_url(@book)
   end
 
+  def search
+    @words = Word.search(params[:name])
+  end
+
 
 
   private
@@ -53,6 +58,10 @@ class WordsController < ApplicationController
 
   def set_book
     @book = Book.find(params[:book_id])
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 
 end

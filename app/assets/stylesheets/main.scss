@@ -48,13 +48,13 @@
         color: #324851;
       }
     }
-    #form{
+    .form{
       position:relative;
       max-width:300px;	
       margin-bottom:20px;
       padding-right: 440px;
       }
-      #box{
+      .box{
       height:50px;
       padding:0 10px; 
       position:absolute; 
@@ -65,7 +65,7 @@
       background:#eee;	
       width: 380px;
       }
-      #btn{
+      .btn{
       height:50px;
       position:absolute; 
       left:350px;
@@ -73,7 +73,7 @@
       background:none;
       color:#666;
       border:none;
-      font-size:20px;
+      font-size:15px;
     }
   }
   .words {
