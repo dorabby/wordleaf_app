@@ -1,11 +1,11 @@
 ## WordLeaf
-* A memo application that resembles a deck.
-* 単語帳をイメージしたメモアプリ。
+* A memo app based on the concept of creating your own dictionary.
+* 自分だけの辞書を作るということをコンセプトにしたメモアプリ。
 
 
 ## Description
-* You can register words and their meanings in series (or by note), and if necessary, you can register details.
-* 単語とその意味をシリーズ（またはノート別に）登録し、必要があれば長文や画像などを記述できる詳細を登録できる。
+* Words and their meanings can be registered for each book, and if necessary, details that can describe long sentences and images can be registered.
+* 単語とその意味をブック別に登録し、必要があれば長文や画像などを記述できる詳細を登録できる。
 
 ## Demo
 * 完成次第動画を貼る

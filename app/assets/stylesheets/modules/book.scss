@@ -22,11 +22,14 @@ h1 {
     margin-bottom: 20px;
     border:1px solid #7da3a1;
   }
-  .save-btn {
+  .save-btn,.link-btn{
     display: inline-block;
     padding: 12px 20px;
     color: #fff;
     background-color: #34675c;
     border: 0;
+    margin-right: 10px;
+  }a{
+      text-decoration: none;
   }
 }

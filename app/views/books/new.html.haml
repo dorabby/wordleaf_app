@@ -1,3 +1,5 @@
 .name-form
   %h1 新規ブック登録
-  = render 'note',  book: @book 
+  =form_for @book do |f|
+    = f.text_field :name, class: "book-name", placeholder: "ブック名を入力してください"
+    = f.submit "登録", class: "save-btn"

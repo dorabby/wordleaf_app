@@ -3,8 +3,9 @@ class WordsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index    
-    @word = Word.all
-    @words = @book.words.includes(:user)
+    @book = Book.find(params[:book_id])
+    @q     = @book.words.ransack(params[:q])
+    @words = @q.result(distinct: true)
   end
 
   def show
@@ -43,12 +44,6 @@ class WordsController < ApplicationController
     @word.destroy
     redirect_to book_words_url(@book)
   end
-
-  def search
-    @words = Word.search(params[:name])
-  end
-
-
 
   private
 

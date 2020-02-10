@@ -1,3 +1,7 @@
 .name-form
   %h1 ブック名編集
-  = render 'note',  book: @book 
+  =form_for @book do |f|
+    = f.text_field :name, class: "book-name", placeholder: "ブック名を入力してください"
+    = f.submit "登録", class: "save-btn"
+    = link_to "削除",book_path(@book),method: :delete,data: { confirm: "本当に削除しますか？" },class: "link-btn"
+    = link_to "戻る",book_words_path(@book),class: "link-btn"

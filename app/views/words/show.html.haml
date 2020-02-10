@@ -7,10 +7,9 @@
   .word-area__details
     = @word.details
   %ul.btn-list
-    %li.return
-      = link_to "戻る",book_words_path(@book)
     %li.edit
       = link_to "編集",edit_book_word_path(@book, @word)
     %li.destroy
-      = link_to "削除",book_words_path(@book)
-  
+      = link_to "削除",book_word_path(@book, @word),method: :delete,data: { confirm: "本当に削除しますか？" }
+    %li.return
+      = link_to "戻る",book_words_path(@book)
