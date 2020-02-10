@@ -113,6 +113,9 @@
       }
     }
   }
+  input[type="submit"], input[type="reset"], input[type="button"], button{
+    cursor: pointer;
+  }
 }
 
 #error_explanation {
