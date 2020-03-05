@@ -1,20 +1,14 @@
 .account-page {
+  font-family: 'klee',sans-serif;
   .account-page__inner {
-    width: 980px;
-    margin: 60px auto;
+    width: 490px;
     padding: 60px;
     background-color: #fff;
     border: 1px solid #34675c;
     border-radius: 5px;
-
-    .account-page__inner--left, .account-page__inner--right {
-      float: left;
-      width: 50%;
-    }
-    &:after {
-      clear: both;
-      content: "";
-      display: block;
+    opacity: 0.9;
+    .account-page__inner--right {
+      width: 80%;
     }
   }
 
@@ -33,20 +27,13 @@
         border-bottom: 1px solid #34675c;
       }
     }
+  }
 
     h5 {
       margin-bottom: 20px;
       font-size: 14px;
       font-weight: 200;
     }
-
-    .btn {
-      margin-top: 20px;
-      color: #fff;
-      background-color: #34675c;
-      font-size: 14px;
-    }
-  }
 
   .field {
     margin-bottom: 10px;
@@ -71,19 +58,29 @@
     }
   }
 
-  .btn {
-    display: inline-block;
-    height: 50px;
-    padding: 0 30px;
-    line-height: 50px;
-    letter-spacing: 1px;
-    text-align: center;
-    border: none;
-    border-radius: 2px;
+  .actions{
+    width: 100%;
+    .btn {
+      margin-top: 20px;
+      color: #fff;
+      background-color: #34675c;
+      font-size: 14px;
+      display: inline-block;
+      height: 50px;
+      padding: 0 30px;
+      line-height: 50px;
+      text-align: center;
+      border: none;
+      border-radius: 2px;
+    }
+    a{
+      text-decoration: none;
+    }
   }
 
+
+
   input[type='submit'] {
-    float: left;
     margin-top: 20px;
     color: #fff;
     background-color: #34675c;

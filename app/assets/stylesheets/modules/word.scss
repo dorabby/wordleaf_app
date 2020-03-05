@@ -5,6 +5,7 @@
   border: 1px solid #34675c;
   border-radius: 5px;
   box-sizing: border-box;
+  font-family: 'klee',sans-serif;
 
   h1 {
     letter-spacing: 2px;
@@ -32,6 +33,8 @@
     margin-bottom: 20px;
     border:1px solid #7da3a1;
     overflow: scroll;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
   .save-btn,

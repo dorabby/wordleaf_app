@@ -1,8 +1,9 @@
 .main
   .header
     .left-header
-      .left-header__title
-        = @book.name
+      .left-header__box
+        .left-header__box__title
+          = @book.name
     .right-header
       .right-header__user
         = current_user.name
