@@ -1,8 +1,8 @@
-.main-word
-  .main-word__word
+.main-words
+  .main-words__word
     = word.name
-  .main-word__Details
+  .main-words__Details
     = link_to book_word_path(@book, word) do
       詳細
-  .main-word__text
+  .main-words__text
     = word.text
