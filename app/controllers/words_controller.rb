@@ -22,7 +22,7 @@ class WordsController < ApplicationController
     if @word.save
       redirect_to book_words_path(@book)
     else
-      render :index
+      render :new
     end
   end
 
