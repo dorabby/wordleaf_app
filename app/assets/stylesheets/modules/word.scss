@@ -5,6 +5,7 @@
   border: 1px solid #34675c;
   border-radius: 5px;
   box-sizing: border-box;
+  font-family: 'klee',sans-serif;
 
   h1 {
     letter-spacing: 2px;
@@ -32,19 +33,24 @@
     margin-bottom: 20px;
     border:1px solid #7da3a1;
     overflow: scroll;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
   .save-btn,
-  li{
+  li,.link-btn{
     display: inline-block;
     padding: 12px 20px;
     margin-right: 10px;
     color: #fff;
     background-color: #34675c;
     border: 0;
-    a{
-      text-decoration: none;
-      color: #fff;
-    }
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+  input[type="submit"],button{
+    cursor: pointer;
   }
 }

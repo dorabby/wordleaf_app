@@ -1,8 +1,9 @@
 .main
   .header
     .left-header
-      .left-header__title
-        = @book.name
+      .left-header__box
+        .left-header__box__title
+          = @book.name
     .right-header
       .right-header__user
         = current_user.name
@@ -14,10 +15,14 @@
       = link_to new_book_word_path(@book) do
         = icon('fa', 'leaf',class: 'icon')
         単語登録
-    %form#form{:action => "自分のサイトURL", :method => "get"}
-      %input#box{:placeholder => "単語を検索", :type => "text"}/
-      %button#btn{:type => "submit"}
-        %i.fas.fa-search
+
+    .form
+      = search_form_for [@book,@q] do |f|
+        = f.search_field :name_cont,placeholder: "単語を検索する", class: "box"
+        = icon('fa', 'search',class: 'search-icon')
+        = f.submit "検索", class: "btn"
+        
+
   .words
-    .word
+    %ul.word
       = render @words

@@ -1,9 +1,11 @@
 class WordsController < ApplicationController
   before_action :set_book
+  before_action :move_to_index, except: [:index, :show, :search]
 
-  def index
-    @word = Word.all
-    @words = @book.words.includes(:user)
+  def index    
+    @book = Book.find(params[:book_id])
+    @q     = @book.words.ransack(params[:q])
+    @words = @q.result(distinct: true)
   end
 
   def show
@@ -20,7 +22,7 @@ class WordsController < ApplicationController
     if @word.save
       redirect_to book_words_path(@book)
     else
-      render :index
+      render :new
     end
   end
 
@@ -43,8 +45,6 @@ class WordsController < ApplicationController
     redirect_to book_words_url(@book)
   end
 
-
-
   private
 
   def word_params
@@ -53,6 +53,10 @@ class WordsController < ApplicationController
 
   def set_book
     @book = Book.find(params[:book_id])
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 
 end
