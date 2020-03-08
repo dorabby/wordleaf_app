@@ -11,8 +11,12 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    @book.save
-    redirect_to root_path
+    if @book.save
+      redirect_to root_path
+    else
+      flash.now[:alert] = "1文字以上入力してください"
+      render :new
+    end
   end
 
   def edit
@@ -24,14 +28,19 @@ class BooksController < ApplicationController
     if @book.update(book_params)
       redirect_to book_words_path(@book)
     else
+      flash.now[:alert] = "編集できませんでした"
       render :edit
     end
   end
 
   def destroy
     @book = Book.find(params[:id])
-    @book.destroy
-    redirect_to root_path
+    if @book.destroy
+      redirect_to root_path
+    else
+      flash.now[:alert] = "削除できませんでした"
+      render :edit
+    end
   end
 
   private

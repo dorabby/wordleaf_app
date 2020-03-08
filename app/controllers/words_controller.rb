@@ -20,8 +20,15 @@ class WordsController < ApplicationController
   def create
     @word = @book.words.new(word_params)
     if @word.save
-      redirect_to book_words_path(@book)
+      redirect_to book_words_path(@book),notice:"▼『#{@word.name}』を登録しました"
+    elsif @word.name.length >= 20
+      flash.now[:alert] = "単語名は20文字以内で登録してください"
+      render :new
+    elsif @word.text.length >= 40
+      flash.now[:alert] = "意味は40文字以内で登録してください"
+      render :new
     else
+      flash.now[:alert] = "登録するには単語名と意味の欄に1文字以上の入力が必須です"
       render :new
     end
   end
@@ -33,16 +40,27 @@ class WordsController < ApplicationController
   def update
     @word = Word.find(params[:id])
     if @word.update(word_params)
-      redirect_to book_words_path(@book)
+      redirect_to book_words_path(@book),notice:"▼『#{@word.name}』を編集しました"
+    elsif @word.name.length >= 20
+      flash.now[:alert] = "単語名は20文字以内で登録してください"
+      render :edit
+    elsif @word.text.length >= 40
+      flash.now[:alert] = "意味は40文字以内で登録してください"
+      render :edit
     else
+      flash.now[:alert] = "編集できませんでした"
       render :edit
     end
   end
 
   def destroy
     @word = Word.find(params[:id])
-    @word.destroy
-    redirect_to book_words_url(@book)
+    if @word.destroy
+      redirect_to book_words_url(@book),notice:"▼『#{@word.name}』を削除しました"
+    else
+      flash.now[:alert] = "削除できませんでした" 
+      render :show
+    end
   end
 
   private

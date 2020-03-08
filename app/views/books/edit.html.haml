@@ -1,4 +1,5 @@
 .name-form
+  = render 'layouts/notifications'
   %h1 ブック名編集
   =form_for @book do |f|
     = f.text_field :name, class: "book-name", placeholder: "ブック名を入力してください"
