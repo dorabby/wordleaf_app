@@ -1,4 +1,5 @@
 .word-form
+  = render 'layouts/notifications'
   %h1 Word 登録
   =form_for [@book,@word] do |f|
     = f.text_field :name, class: "word-area__name", placeholder: "単語を入力してください(25文字まで)"

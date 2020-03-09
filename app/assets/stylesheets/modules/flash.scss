@@ -1,0 +1,24 @@
+.notification {
+  .notice {
+    color: green;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+  }
+  .alert {
+    color: red;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+  }
+}
+
+.loginmesseage{
+  box-sizing: border-box;
+  color: green;
+  width: 250px;
+  background-color: #fff;
+  text-align: center;
+  opacity: 0.9;
+}
