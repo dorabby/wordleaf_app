@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 2020_02_07_024251) do
     t.string "name", null: false
     t.string "text", null: false
     t.text "details"
-    t.string "image"
     t.bigint "user_id"
     t.bigint "book_id"
     t.datetime "created_at", null: false
