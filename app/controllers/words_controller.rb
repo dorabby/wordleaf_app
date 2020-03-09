@@ -66,7 +66,7 @@ class WordsController < ApplicationController
   private
 
   def word_params
-    params.require(:word).permit(:name,:text,:details,:image).merge(user_id: current_user.id)
+    params.require(:word).permit(:name,:text,:details).merge(user_id: current_user.id)
   end
 
   def set_book
@@ -75,11 +75,6 @@ class WordsController < ApplicationController
 
   def move_to_index
     redirect_to action: :index unless user_signed_in?
-  end
-
-  def correct_user
-    @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
   end
 
 end
