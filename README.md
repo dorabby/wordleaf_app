@@ -30,4 +30,4 @@
 
 ## Author
 * Aoi Tokuzumi
-* dorabbi1010@gmail.com
+* o68.tokuzumi.aoi@gmail.com
